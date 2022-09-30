@@ -16,7 +16,7 @@ The `variant` prop determines the type of toggle to render. It can be one of the
 
 ### `status`
 
-The `status` prop is used to determine the interactibility or style of the toggle. It can be set to `disabled` or `error`. It is `null` by default.
+The `status` prop is used to determine the interactibility or style of the toggle. It can be set to `disabled` or `error`. It is `undefined` by default.
 
 When set to `error`, elements of the toggle will have their colors set to `colors.errorBackground` or `colors.error`.
 
@@ -26,7 +26,7 @@ When set to `error`, elements of the toggle will have their colors set to `color
 
 ### `editable`
 
-The `editable` prop determines whether the toggle is interactible. It is `true` by default.
+The `editable` prop determines whether the toggle is interactible. It is `true` by default. This prop is similar to the `disabled` prop, and can be used interchangably.
 
 ```tsx
 <Toggle value={value} onValueChange={setValue} editable={false} />
@@ -54,6 +54,14 @@ The `containerStyle` prop is a style object that is applied to the container of 
 
 ```tsx
 <Toggle value={value} onValueChange={setValue} containerStyle={{ backgroundColor: "#fff" }} />
+```
+
+### `inputWrapperStyle`
+
+The `inputWrapperStyle` prop is a style object that is applied to the wrapper of the toggle input.
+
+```tsx
+<Toggle value={value} onValueChange={setValue} inputWrapperStyle={{ backgroundColor: "#fff" }} />
 ```
 
 ### `inputOuterStyle`
